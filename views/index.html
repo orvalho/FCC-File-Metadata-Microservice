@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>File Metadata</title>
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet" type="text/css">
+    <link href="/public/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h1>File Metadata Microservice</h1>
+
+      <div class="wrapper">
+        <h2>Description</h2>
+        <p>This service provides the file name, type and size in bytes of your uploaded file.</p>
+      </div>
+
+      <div class="wrapper">
+        <h2>Usage</h2>
+        <p>Please Upload a File!</p>
+        <div class="view">
+          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
+            <label class="custom-file-upload input">Choose a file<input id="inputfield" type="file" name="upfile"></label>
+            <span id="file-selected"></span>
+            <input id="button" class="input" type="submit" value="Upload">
+          </form>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <h2>Example Output</h2>
+        <p><code>{"name":"beautifulSound.ogg",<br>
+                  "type":"audio/ogg",<br>
+                  "size":10301}
+        </code></p>
+      </div>
+
+    </div>
+    
+    <script src="/public/script.js"></script>
+  
+  </body>
+
+</html>
